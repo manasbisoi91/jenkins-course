@@ -13,8 +13,9 @@ node {
     // mark build as failed
     currentBuild.result = "FAILURE";
 
-    // send slack notification
-    slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+    // send opsgenie notification
+    opsgenie(tags: "tag1,tag2" ,  teams: "ReleaseMangement",  priority: "P1")
+
 
     // throw the error
     throw e;
