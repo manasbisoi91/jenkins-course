@@ -14,7 +14,7 @@ node {
     currentBuild.result = "FAILURE";
 
     // send opsgenie notification
-    opsgenie(tags: "tag1,tag2" ,  teams: "ReleaseMangement",  priority: "P1")
+    opsgenie(tags: "tag1,tag2" ,  teams: "ReleaseMangement",  priority: "P3")
 
 
     // throw the error
